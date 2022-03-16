@@ -1,0 +1,181 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+  height: 200vh;
+}
+
+footer {
+  margin-top: 20vh;
+  height: 50vh;
+  background: #000;
+}
+
+.gallery {
+  background: #eee;
+}
+
+.gallery-cell {
+  width: 28%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8c8;
+  counter-increment: gallery-cell;
+}
+
+.gallery-cell.is-selected {
+  background: #ed2;
+}
+
+/* no circle */
+.flickity-button {
+  background: transparent;
+}
+/* big previous & next buttons */
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+}
+/* icon color */
+.flickity-button-icon {
+  fill: white;
+}
+
+.flickity-button-icon:hover {
+  fill: rgb(255, 255, 255);
+}
+
+/* hide disabled button */
+.flickity-button:disabled {
+  display: none;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.head-sticky {
+  margin-top: 1rem;
+}
+
+.hero {
+  height: 85vh;
+  overflow: hidden;
+  background-image: url(/img/cloud.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* filter: brightness(100%) grayscale(1); */
+}
+
+.hero h1 {
+  position: absolute;
+  margin-top: 500px;
+}
+
+.hero img {
+  width: 100%;
+  filter: brightness(10%);
+}
+
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  user-select: none;
+}
+
+.abyss-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* height: 100%; */
+  margin-top: -40px;
+  width: 100%;
+  user-select: none;
+}
+
+.abyss {
+  color: #fcfffd;
+  font-size: 91px;
+  /* padding: 15px; */
+  font-family: "Anton", sans-serif;
+}
+
+.iam {
+  color: #fcfffd;
+  font-size: 55px;
+  padding: 15px;
+  font-family: "Anton", sans-serif;
+}
+.text {
+  color: #fcfffd;
+  border-right: 2px solid #7fc8f8;
+  font-size: 55px;
+  font-family: sans-serif;
+  color: #7fc8f8;
+  font-family: "Anton", sans-serif;
+}
+
+.menu-container {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.menu-tab {
+  font-size: 16px;
+  padding: 15px 60px;
+  cursor: pointer;
+}
+
+.menu-tab.active {
+  background-color: rgb(250, 97, 9);
+}
+
+.menu-content {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 25px;
+}
+
+.menu-content-item {
+  display: none;
+  padding: 50px;
+  border: 1px solid #ccc;
+}
+
+.menu-content-item.active {
+  display: flex;
+  justify-content: center;
+}
