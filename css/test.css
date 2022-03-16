@@ -15,6 +15,7 @@ body {
 }
 
 footer {
+  width: 100vw;
   height: 50vh;
   background: #000;
 }
@@ -74,6 +75,7 @@ footer {
 
 .hero {
   height: 85vh;
+  width: 100vw;
   overflow: hidden;
   background-image: url(/img/cloud.gif);
   background-repeat: no-repeat;
@@ -115,16 +117,16 @@ footer {
 
 .abyss {
   color: #fcfffd;
-  font-size: 91px;
+  font-size: 100px;
   /* padding: 15px; */
-  font-family: "Anton", sans-serif;
+  font-family: "Bebas Neue", cursive;
 }
 
 .iam {
   color: #fcfffd;
   font-size: 55px;
   padding: 15px;
-  font-family: "Anton", sans-serif;
+  font-family: "Bebas Neue", cursive;
 }
 .text {
   color: #fcfffd;
@@ -132,7 +134,7 @@ footer {
   font-size: 55px;
   font-family: sans-serif;
   color: #7fc8f8;
-  font-family: "Anton", sans-serif;
+  font-family: "Bebas Neue", cursive;
 }
 
 .menu-container {
