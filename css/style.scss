@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Fugaz+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Gothic&family=Staatliches&display=swap");
 
 :root {
-  // font-size: 16px;
-  font-family: "Open Sans";
+  font-size: 16px;
   --color1: #000814;
   --color2: #fcfffd;
   --color3: #7fc8f8;
@@ -13,7 +12,7 @@
   --contrast-secondary: #339ce0;
   --bg-primary: #000000;
   --bg-secondary: #141418;
-  --transition-speed: 300ms;
+  --transition-speed: 250ms;
   --nav-content-width: 60%;
   --main-content-width: 50%;
   --hero-content-width: 65%;
@@ -165,135 +164,124 @@ body {
     nav {
       position: fixed;
       z-index: 3;
-
-      .hamburger {
-        display: block;
-        position: absolute;
-        cursor: pointer;
-        right: 5%;
-        top: 50%;
-        transform: translate(-5%, -50%);
-        z-index: 2;
-        transition: all 0.7s ease;
-      }
-      .nav-links {
-        position: fixed;
-        background: #131418;
-        height: 100vh;
+      .navbar-wrapper {
         width: 100%;
-        flex-direction: column;
-        clip-path: circle(50px at 90% -20%);
-        transition: all 1s ease-out;
-        pointer-events: none;
-      }
-      .nav-links.open {
-        clip-path: circle(1000px at 90% -10%);
-        pointer-events: all;
-      }
-      .nav-links li {
-        opacity: 0;
-      }
-      .nav-links li:nth-child(1) {
-        transition: all 0.5s ease 0.2s;
-      }
-      .nav-links li:nth-child(2) {
-        transition: all 0.5s ease 0.4s;
-      }
-      .nav-links li:nth-child(3) {
-        transition: all 0.5s ease 0.6s;
-      }
-      .nav-links li:nth-child(4) {
-        transition: all 0.5s ease 0.7s;
-      }
-      .nav-links li:nth-child(5) {
-        transition: all 0.5s ease 0.8s;
-      }
-      .nav-links li:nth-child(6) {
-        transition: all 0.5s ease 0.9s;
-        margin: 0;
-      }
-      .nav-links li:nth-child(7) {
-        transition: all 0.5s ease 1s;
-        margin: 0;
-      }
-      li.fade {
-        opacity: 1;
+        .hamburger {
+          display: block;
+          position: absolute;
+          cursor: pointer;
+          right: 5%;
+          top: 50%;
+          transform: translate(-5%, -50%);
+          z-index: 2;
+          transition: all 0.7s ease;
+        }
+        .nav-links {
+          position: fixed;
+          background: #131418;
+          height: 100vh;
+          width: 100%;
+          flex-direction: column;
+          clip-path: circle(50px at 90% -20%);
+          transition: all 1s ease-out;
+          pointer-events: none;
+        }
+        .nav-links.open {
+          clip-path: circle(1000px at 90% -10%);
+          pointer-events: all;
+        }
+        .nav-links li {
+          opacity: 0;
+        }
+        .nav-links li:nth-child(1) {
+          transition: all 0.5s ease 0.2s;
+        }
+        .nav-links li:nth-child(2) {
+          transition: all 0.5s ease 0.4s;
+        }
+        .nav-links li:nth-child(3) {
+          transition: all 0.5s ease 0.6s;
+        }
+        .nav-links li:nth-child(4) {
+          transition: all 0.5s ease 0.7s;
+        }
+        .nav-links li:nth-child(5) {
+          transition: all 0.5s ease 0.8s;
+        }
+        .nav-links li:nth-child(6) {
+          transition: all 0.5s ease 0.9s;
+          margin: 0;
+        }
+        .nav-links li:nth-child(7) {
+          transition: all 0.5s ease 1s;
+          margin: 0;
+        }
+        li.fade {
+          opacity: 1;
+        }
       }
     }
   }
   /*Animating Hamburger Icon on Click*/
 
   main {
-    .container {
+    width: 100vw;
+
+    .wrapper {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    section {
-      width: var(--main-content-width);
-      max-width: 60%;
-      margin-top: 3rem;
-      margin-bottom: 3rem;
-      .reverse {
-        display: flex;
-        justify-content: flex-end;
-      }
-      header {
-        h1 {
-          font-size: 2.5rem;
-          margin: 40px 0px 15px 0px;
-        }
-      }
-      ul {
-        display: flex;
-        li {
-          .sc-c-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            .sc-text {
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-            }
-            h2 {
-              font-size: 1.8rem;
-            }
-            p {
-              padding-top: 0.5rem;
-              padding-right: 6vw;
-            }
-            a {
-              width: 150px;
-              background-color: #444944;
-              border: none;
-              color: white;
-              margin-top: 0.6rem;
-              padding: 15px 0px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-            }
-            a:hover {
-              background-color: #1f201f;
-            }
+      flex-wrap: wrap;
+      section {
+        width: 50vw;
+        height: 25vw;
+        article {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          height: 100%;
+          h1,
+          p,
+          a {
+            // margin: 5px;
+            color: var(--color2);
           }
-          .reverse {
-            display: flex;
-            align-items: flex-end;
-            text-align: right;
-            p {
-              padding-left: 6vw;
-              padding-right: 0vw;
-            }
+          p {
+            font-size: 2rem;
+            font-family: "League Gothic", sans-serif;
           }
-          img {
-            width: 700px;
-            height: 300px;
-            background-color: #000000;
+          h1 {
+            text-transform: uppercase;
+            font-size: 5rem;
+            margin: -15px 0px -15px 0px;
+            font-family: "Bebas Neue", cursive;
+          }
+          a {
+            padding: 10px 30px 10px 30px;
+            border-radius: 90px;
+            border: none;
+            background-color: var(--color4);
+            font-size: 1.5rem;
+            margin-top: 15px;
+            font-family: "Bebas Neue", cursive;
+            transition: all ease-in-out var(--transition-speed);
+          }
+          a:hover {
+            filter: brightness(170%);
+            transition: all ease-in-out var(--transition-speed);
           }
         }
+      }
+      .menu {
+        background-color: #546c85;
+      }
+      .membership {
+        background-color: #827eaf;
+      }
+      .catering {
+        background-color: #94af7e;
+      }
+      .apply {
+        background-color: #ac4425;
       }
     }
   }

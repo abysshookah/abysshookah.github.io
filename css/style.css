@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Fugaz+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Gothic&family=Staatliches&display=swap");
 :root {
-  font-family: "Open Sans";
+  font-size: 16px;
   --color1: #000814;
   --color2: #fcfffd;
   --color3: #7fc8f8;
@@ -11,7 +11,7 @@
   --contrast-secondary: #339ce0;
   --bg-primary: #000000;
   --bg-secondary: #141418;
-  --transition-speed: 300ms;
+  --transition-speed: 250ms;
   --nav-content-width: 60%;
   --main-content-width: 50%;
   --hero-content-width: 65%;
@@ -208,7 +208,10 @@ body .toggle .line3 {
     position: fixed;
     z-index: 3;
   }
-  body nav .hamburger {
+  body nav .navbar-wrapper {
+    width: 100%;
+  }
+  body nav .navbar-wrapper .hamburger {
     display: block;
     position: absolute;
     cursor: pointer;
@@ -220,7 +223,7 @@ body .toggle .line3 {
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;
   }
-  body nav .nav-links {
+  body nav .navbar-wrapper .nav-links {
     position: fixed;
     background: #131418;
     height: 100vh;
@@ -235,160 +238,134 @@ body .toggle .line3 {
     transition: all 1s ease-out;
     pointer-events: none;
   }
-  body nav .nav-links.open {
+  body nav .navbar-wrapper .nav-links.open {
     -webkit-clip-path: circle(1000px at 90% -10%);
             clip-path: circle(1000px at 90% -10%);
     pointer-events: all;
   }
-  body nav .nav-links li {
+  body nav .navbar-wrapper .nav-links li {
     opacity: 0;
   }
-  body nav .nav-links li:nth-child(1) {
+  body nav .navbar-wrapper .nav-links li:nth-child(1) {
     -webkit-transition: all 0.5s ease 0.2s;
     transition: all 0.5s ease 0.2s;
   }
-  body nav .nav-links li:nth-child(2) {
+  body nav .navbar-wrapper .nav-links li:nth-child(2) {
     -webkit-transition: all 0.5s ease 0.4s;
     transition: all 0.5s ease 0.4s;
   }
-  body nav .nav-links li:nth-child(3) {
+  body nav .navbar-wrapper .nav-links li:nth-child(3) {
     -webkit-transition: all 0.5s ease 0.6s;
     transition: all 0.5s ease 0.6s;
   }
-  body nav .nav-links li:nth-child(4) {
+  body nav .navbar-wrapper .nav-links li:nth-child(4) {
     -webkit-transition: all 0.5s ease 0.7s;
     transition: all 0.5s ease 0.7s;
   }
-  body nav .nav-links li:nth-child(5) {
+  body nav .navbar-wrapper .nav-links li:nth-child(5) {
     -webkit-transition: all 0.5s ease 0.8s;
     transition: all 0.5s ease 0.8s;
   }
-  body nav .nav-links li:nth-child(6) {
+  body nav .navbar-wrapper .nav-links li:nth-child(6) {
     -webkit-transition: all 0.5s ease 0.9s;
     transition: all 0.5s ease 0.9s;
     margin: 0;
   }
-  body nav .nav-links li:nth-child(7) {
+  body nav .navbar-wrapper .nav-links li:nth-child(7) {
     -webkit-transition: all 0.5s ease 1s;
     transition: all 0.5s ease 1s;
     margin: 0;
   }
-  body nav li.fade {
+  body nav .navbar-wrapper li.fade {
     opacity: 1;
   }
 }
 
-body main .container {
+body main {
+  width: 100vw;
+}
+
+body main .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main .wrapper section {
+  width: 50vw;
+  height: 25vw;
+}
+
+body main .wrapper section article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body main section {
-  width: var(--main-content-width);
-  max-width: 60%;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-body main section .reverse {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-body main section header h1 {
-  font-size: 2.5rem;
-  margin: 40px 0px 15px 0px;
-}
-
-body main section ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body main section ul li .sc-c-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 100%;
 }
 
-body main section ul li .sc-c-text .sc-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+body main .wrapper section article h1,
+body main .wrapper section article p,
+body main .wrapper section article a {
+  color: var(--color2);
 }
 
-body main section ul li .sc-c-text h2 {
-  font-size: 1.8rem;
+body main .wrapper section article p {
+  font-size: 2rem;
+  font-family: "League Gothic", sans-serif;
 }
 
-body main section ul li .sc-c-text p {
-  padding-top: 0.5rem;
-  padding-right: 6vw;
+body main .wrapper section article h1 {
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin: -15px 0px -15px 0px;
+  font-family: "Bebas Neue", cursive;
 }
 
-body main section ul li .sc-c-text a {
-  width: 150px;
-  background-color: #444944;
+body main .wrapper section article a {
+  padding: 10px 30px 10px 30px;
+  border-radius: 90px;
   border: none;
-  color: white;
-  margin-top: 0.6rem;
-  padding: 15px 0px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  background-color: var(--color4);
+  font-size: 1.5rem;
+  margin-top: 15px;
+  font-family: "Bebas Neue", cursive;
+  -webkit-transition: all ease-in-out var(--transition-speed);
+  transition: all ease-in-out var(--transition-speed);
 }
 
-body main section ul li .sc-c-text a:hover {
-  background-color: #1f201f;
+body main .wrapper section article a:hover {
+  -webkit-filter: brightness(170%);
+          filter: brightness(170%);
+  -webkit-transition: all ease-in-out var(--transition-speed);
+  transition: all ease-in-out var(--transition-speed);
 }
 
-body main section ul li .reverse {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  text-align: right;
+body main .wrapper .menu {
+  background-color: #546c85;
 }
 
-body main section ul li .reverse p {
-  padding-left: 6vw;
-  padding-right: 0vw;
+body main .wrapper .membership {
+  background-color: #827eaf;
 }
 
-body main section ul li img {
-  width: 700px;
-  height: 300px;
-  background-color: #000000;
+body main .wrapper .catering {
+  background-color: #94af7e;
+}
+
+body main .wrapper .apply {
+  background-color: #ac4425;
 }
 
 body .opening-hours {

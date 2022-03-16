@@ -12,11 +12,9 @@
 body {
   font-family: sans-serif;
   overflow-x: hidden;
-  height: 200vh;
 }
 
 footer {
-  margin-top: 20vh;
   height: 50vh;
   background: #000;
 }
