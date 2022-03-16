@@ -211,6 +211,35 @@ body main .wrapper {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background-color: #000;
+}
+
+body main .wrapper .menu {
+  background-image: url(/img/menu.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body main .wrapper .membership {
+  background-image: url(/img/membership.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body main .wrapper .catering {
+  background-image: url(/img/catering.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body main .wrapper .apply {
+  background-image: url(/img/apply.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 body main .wrapper section {
@@ -270,31 +299,7 @@ body main .wrapper section article a {
   transition: all ease-in-out var(--transition-speed);
 }
 
-body main .wrapper .menu {
-  background-color: #546c85;
-  background-image: url(/img/menu.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-body main .wrapper .membership {
-  background-color: var(--color3);
-}
-
-body main .wrapper .catering {
-  background-color: #94af7e;
-  background-image: url(/img/catering.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-body main .wrapper .apply {
-  background-color: var(--color4);
-}
-
-body main .wrapper a:hover {
+body main .wrapper section article a:hover {
   -webkit-filter: brightness(170%);
           filter: brightness(170%);
   -webkit-transition: all ease-in-out var(--transition-speed);
@@ -347,7 +352,36 @@ body footer .opening-hours p {
 }
 
 /*Stying for small screens*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+  .wrapper .menu,
+  .wrapper .membership,
+  .wrapper .catering,
+  .wrapper .apply {
+    width: 100vw;
+    height: 50vw;
+  }
+  .wrapper .menu p,
+  .wrapper .membership p,
+  .wrapper .catering p,
+  .wrapper .apply p {
+    font-size: 1.5rem;
+  }
+  .wrapper .menu h1,
+  .wrapper .membership h1,
+  .wrapper .catering h1,
+  .wrapper .apply h1 {
+    font-size: 2rem;
+    margin: 0px 0px 0px 0px;
+  }
+  .wrapper .menu a,
+  .wrapper .membership a,
+  .wrapper .catering a,
+  .wrapper .apply a {
+    font-size: 1rem;
+    padding: 10px 25px 10px 25px;
+    border-radius: 90px;
+    margin-top: 10px;
+  }
   nav {
     position: fixed;
     z-index: 3;

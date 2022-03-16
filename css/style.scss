@@ -166,6 +166,31 @@ body {
     .wrapper {
       display: flex;
       flex-wrap: wrap;
+      background-color: #000;
+      .menu {
+        background-image: url(/img/menu.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .membership {
+        background-image: url(/img/membership.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .catering {
+        background-image: url(/img/catering.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .apply {
+        background-image: url(/img/apply.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
       section {
         width: 50vw;
         height: 25vw;
@@ -203,32 +228,12 @@ body {
             font-family: "Bebas Neue", cursive;
             transition: all ease-in-out var(--transition-speed);
           }
+          a:hover {
+            filter: brightness(170%);
+            transition: all ease-in-out var(--transition-speed);
+            background-size: contain;
+          }
         }
-      }
-      .menu {
-        background-color: #546c85;
-        background-image: url(/img/menu.png);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      .membership {
-        background-color: var(--color3);
-      }
-      .catering {
-        background-color: #94af7e;
-        background-image: url(/img/catering.png);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      .apply {
-        background-color: var(--color4);
-      }
-      a:hover {
-        filter: brightness(170%);
-        transition: all ease-in-out var(--transition-speed);
-        background-size: contain;
       }
     }
     iframe {
@@ -263,7 +268,30 @@ body {
 }
 
 /*Stying for small screens*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    .menu,
+    .membership,
+    .catering,
+    .apply {
+      width: 100vw;
+      height: 50vw;
+      p {
+        font-size: 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+        margin: 0px 0px 0px 0px;
+      }
+      a {
+        font-size: 1rem;
+        padding: 10px 25px 10px 25px;
+        border-radius: 90px;
+        margin-top: 10px;
+      }
+    }
+  }
+
   nav {
     position: fixed;
     z-index: 3;
