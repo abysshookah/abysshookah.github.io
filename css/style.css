@@ -302,10 +302,48 @@ body main .wrapper a:hover {
   background-size: contain;
 }
 
-body .opening-hours {
+body main iframe {
+  width: 100vw;
+  -webkit-filter: grayscale(0.5);
+          filter: grayscale(0.5);
+}
+
+body footer {
+  width: 100vw;
+  height: 50vh;
+  background: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .opening-hours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body footer .opening-hours h1 {
+  color: white;
+  text-align: center;
+}
+
+body footer .opening-hours p {
+  color: white;
+  text-align: center;
 }
 
 /*Stying for small screens*/

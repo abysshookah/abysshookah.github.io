@@ -14,12 +14,6 @@ body {
   overflow-x: hidden;
 }
 
-footer {
-  width: 100vw;
-  height: 50vh;
-  background: #000;
-}
-
 .gallery {
   background: #eee;
 }
