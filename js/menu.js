@@ -1,5 +1,5 @@
-let tabs = document.querySelectorAll('.tab');
-let content = document.querySelectorAll('.content-item');
+let tabs = document.querySelectorAll('.menu-tab');
+let content = document.querySelectorAll('.menu-content-item');
 for (let i = 0; i < tabs.length; i++) {
   tabs[i].addEventListener('click', () => tabClick(i));
 }

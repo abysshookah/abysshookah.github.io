@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Fugaz+One&display=swap");
 :root {
-  font-size: 16px;
   font-family: "Open Sans";
   --color1: #000814;
   --color2: #fcfffd;
@@ -14,7 +13,7 @@
   --bg-secondary: #141418;
   --transition-speed: 300ms;
   --nav-content-width: 60%;
-  --main-content-width: 60%;
+  --main-content-width: 50%;
   --hero-content-width: 65%;
   --margin-top: 60px;
 }
@@ -293,6 +292,7 @@ body main .container {
 }
 
 body main section {
+  width: var(--main-content-width);
   max-width: 60%;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -309,6 +309,7 @@ body main section .reverse {
 
 body main section header h1 {
   font-size: 2.5rem;
+  margin: 40px 0px 15px 0px;
 }
 
 body main section ul {
@@ -342,6 +343,10 @@ body main section ul li .sc-c-text .sc-text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+body main section ul li .sc-c-text h2 {
+  font-size: 1.8rem;
 }
 
 body main section ul li .sc-c-text p {
@@ -381,7 +386,9 @@ body main section ul li .reverse p {
 }
 
 body main section ul li img {
-  width: 500px;
+  width: 700px;
+  height: 300px;
+  background-color: #000000;
 }
 
 body .opening-hours {
