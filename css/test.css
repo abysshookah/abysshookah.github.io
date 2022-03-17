@@ -63,6 +63,64 @@ body {
   color: white;
 }
 
+.scroll-indicator {
+  display: block;
+  margin-bottom: 30px;
+  width: 20px;
+  height: 40px;
+  border: 2px solid #7fc8f8c7;
+  border-radius: 50px;
+  position: absolute;
+  box-shadow: 0px 0px 35px -5px #7fc8f8c7;
+  opacity: 100%;
+  transition: all 0.5s;
+}
+
+.display-none {
+  opacity: 0%;
+  transition: opacity 0.5s;
+}
+
+.scroll-indicator::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #7fc8f8c7;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  animation: scrollAnim 1.8s 0.5s infinite ease-in;
+  box-shadow: 0px 0px 35px -5px #7fc8f8c7;
+}
+
+/* Animation */
+@keyframes scrollAnim {
+  0% {
+    transform: translate(-50%, 0) rotateX(0);
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 0.5;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  90%,
+  100% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, 30px) rotateX(30deg);
+  }
+}
+/* Animation */
+
 .head-sticky {
   margin-top: 1rem;
 }
@@ -75,6 +133,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .hero h1 {
@@ -123,10 +184,10 @@ body {
 }
 .text {
   color: #fcfffd;
-  border-right: 2px solid #003366;
+  border-right: 2px solid #7fc8f8;
   font-size: 55px;
   font-family: sans-serif;
-  color: #003366;
+  color: #7fc8f8;
   font-family: "Bebas Neue", cursive;
 }
 

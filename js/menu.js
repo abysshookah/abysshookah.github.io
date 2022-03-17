@@ -17,3 +17,4 @@ function removeActive() {
     content[i].classList.remove('active');
   }
 }
+

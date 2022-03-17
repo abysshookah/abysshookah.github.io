@@ -235,7 +235,8 @@ body {
             padding: 10px 35px 10px 35px;
             border-radius: 90px;
             border: none;
-            background-color: var(--color4);
+            color: var(--color1);
+            background-color: var(--color3);
             font-size: 1.5rem;
             margin-top: 15px;
             font-family: "Bebas Neue", cursive;
@@ -389,16 +390,18 @@ body {
   }
 }
 
-/*Stying for small screens*/
 @media screen and (max-width: 1000px) {
   body {
     .wrapper {
+      section {
+        height: 40vw;
+      }
       .menu,
       .membership,
       .catering,
       .apply {
         width: 100vw;
-        height: 60vw;
+        height: 70vw;
         p {
           font-size: 1.5rem;
         }
@@ -510,17 +513,80 @@ body {
       }
     }
     iframe {
-      height: 60vw;
+      height: 70vw;
     }
     footer {
       .footer-wrapper {
+        align-items: center;
         .footer-rap {
-          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
           .footer-policy {
             flex-wrap: wrap;
+            a,
+            p {
+              font-size: 12px;
+            }
           }
           .footer-copyright {
             margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 500px) {
+  body {
+    .wrapper {
+      section {
+        height: 40vw;
+      }
+      .menu,
+      .membership,
+      .catering,
+      .apply {
+        width: 100vw;
+        height: 70vw;
+        p {
+          font-size: 1.5rem;
+        }
+        h1 {
+          font-size: 2rem;
+          margin: 0px 0px 0px 0px;
+        }
+        a {
+          font-size: 1rem;
+          padding: 10px 25px 10px 25px;
+          border-radius: 90px;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    footer {
+      .footer-wrapper {
+        align-items: center;
+        .footer-rap {
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          .footer-policy {
+            flex-wrap: wrap;
+            a,
+            p {
+              font-size: 8px;
+            }
+          }
+          .footer-copyright {
+            margin-top: 20px;
+            a,
+            p {
+              font-size: 14px;
+            }
           }
         }
       }

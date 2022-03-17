@@ -315,7 +315,8 @@ body main .wrapper section article a {
   padding: 10px 35px 10px 35px;
   border-radius: 90px;
   border: none;
-  background-color: var(--color4);
+  color: var(--color1);
+  background-color: var(--color3);
   font-size: 1.5rem;
   margin-top: 15px;
   font-family: "Bebas Neue", cursive;
@@ -490,14 +491,16 @@ body footer .footer-wrapper a:hover {
   }
 }
 
-/*Stying for small screens*/
 @media screen and (max-width: 1000px) {
+  body .wrapper section {
+    height: 40vw;
+  }
   body .wrapper .menu,
   body .wrapper .membership,
   body .wrapper .catering,
   body .wrapper .apply {
     width: 100vw;
-    height: 60vw;
+    height: 70vw;
   }
   body .wrapper .menu p,
   body .wrapper .membership p,
@@ -645,9 +648,84 @@ body footer .footer-wrapper a:hover {
     opacity: 1;
   }
   body iframe {
-    height: 60vw;
+    height: 70vw;
+  }
+  body footer .footer-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body footer .footer-wrapper .footer-rap {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body footer .footer-wrapper .footer-rap .footer-policy {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body footer .footer-wrapper .footer-rap .footer-policy a,
+  body footer .footer-wrapper .footer-rap .footer-policy p {
+    font-size: 12px;
+  }
+  body footer .footer-wrapper .footer-rap .footer-copyright {
+    margin-top: 20px;
+  }
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 500px) {
+  body .wrapper section {
+    height: 40vw;
+  }
+  body .wrapper .menu,
+  body .wrapper .membership,
+  body .wrapper .catering,
+  body .wrapper .apply {
+    width: 100vw;
+    height: 70vw;
+  }
+  body .wrapper .menu p,
+  body .wrapper .membership p,
+  body .wrapper .catering p,
+  body .wrapper .apply p {
+    font-size: 1.5rem;
+  }
+  body .wrapper .menu h1,
+  body .wrapper .membership h1,
+  body .wrapper .catering h1,
+  body .wrapper .apply h1 {
+    font-size: 2rem;
+    margin: 0px 0px 0px 0px;
+  }
+  body .wrapper .menu a,
+  body .wrapper .membership a,
+  body .wrapper .catering a,
+  body .wrapper .apply a {
+    font-size: 1rem;
+    padding: 10px 25px 10px 25px;
+    border-radius: 90px;
+    margin-top: 10px;
+  }
+  body footer .footer-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body footer .footer-wrapper .footer-rap {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -655,8 +733,16 @@ body footer .footer-wrapper a:hover {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  body footer .footer-wrapper .footer-rap .footer-policy a,
+  body footer .footer-wrapper .footer-rap .footer-policy p {
+    font-size: 8px;
+  }
   body footer .footer-wrapper .footer-rap .footer-copyright {
     margin-top: 20px;
+  }
+  body footer .footer-wrapper .footer-rap .footer-copyright a,
+  body footer .footer-wrapper .footer-rap .footer-copyright p {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=style.css.map */
