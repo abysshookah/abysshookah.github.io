@@ -281,15 +281,16 @@ body {
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-
         h1 {
-          font-size: 25px;
-          margin-right: 10px;
+          font-size: 27px;
+          margin-right: 15px;
+          padding-top: 5px;
+          font-family: "Bebas Neue", cursive;
         }
         a {
           margin-right: 10px;
           transition: var(--transition-speed);
-
+          padding-bottom: 4px;
           img {
             width: 1.4rem;
             height: 1.4em;
@@ -331,9 +332,58 @@ body {
         width: 80vw;
       }
     }
+    main {
+      .wrapper {
+        section {
+          article {
+            p {
+              font-size: 1.8rem;
+            }
+            h1 {
+              font-size: 4.5rem;
+            }
+            a {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
     footer {
       .footer-wrapper {
         width: 80vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    nav {
+      .navbar-wrapper {
+        width: 90vw;
+      }
+    }
+    main {
+      .wrapper {
+        section {
+          article {
+            p {
+              font-size: 1.4rem;
+            }
+            h1 {
+              font-size: 3.6rem;
+            }
+            a {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      .footer-wrapper {
+        width: 90vw;
       }
     }
   }
@@ -461,6 +511,19 @@ body {
     }
     iframe {
       height: 60vw;
+    }
+    footer {
+      .footer-wrapper {
+        .footer-rap {
+          flex-wrap: wrap;
+          .footer-policy {
+            flex-wrap: wrap;
+          }
+          .footer-copyright {
+            margin-top: 20px;
+          }
+        }
+      }
     }
   }
 }

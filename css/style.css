@@ -392,14 +392,17 @@ body footer .footer-wrapper .footer-sm {
 }
 
 body footer .footer-wrapper .footer-sm h1 {
-  font-size: 25px;
-  margin-right: 10px;
+  font-size: 27px;
+  margin-right: 15px;
+  padding-top: 5px;
+  font-family: "Bebas Neue", cursive;
 }
 
 body footer .footer-wrapper .footer-sm a {
   margin-right: 10px;
   -webkit-transition: var(--transition-speed);
   transition: var(--transition-speed);
+  padding-bottom: 4px;
 }
 
 body footer .footer-wrapper .footer-sm a img {
@@ -455,8 +458,35 @@ body footer .footer-wrapper a:hover {
   body nav .navbar-wrapper {
     width: 80vw;
   }
+  body main .wrapper section article p {
+    font-size: 1.8rem;
+  }
+  body main .wrapper section article h1 {
+    font-size: 4.5rem;
+  }
+  body main .wrapper section article a {
+    font-size: 1.4rem;
+  }
   body footer .footer-wrapper {
     width: 80vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body nav .navbar-wrapper {
+    width: 90vw;
+  }
+  body main .wrapper section article p {
+    font-size: 1.4rem;
+  }
+  body main .wrapper section article h1 {
+    font-size: 3.6rem;
+  }
+  body main .wrapper section article a {
+    font-size: 1.2rem;
+  }
+  body footer .footer-wrapper {
+    width: 90vw;
   }
 }
 
@@ -616,6 +646,17 @@ body footer .footer-wrapper a:hover {
   }
   body iframe {
     height: 60vw;
+  }
+  body footer .footer-wrapper .footer-rap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body footer .footer-wrapper .footer-rap .footer-policy {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body footer .footer-wrapper .footer-rap .footer-copyright {
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
