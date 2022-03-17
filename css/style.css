@@ -25,10 +25,20 @@
   scroll-behavior: smooth;
   list-style-type: none;
   color: var(--color1);
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
 }
 
 body {
   background-color: var(--color2);
+  overflow-x: hidden;
 }
 
 body nav {
@@ -61,6 +71,10 @@ body nav .navbar-wrapper {
   /*Styling Links*/
 }
 
+body nav .navbar-wrapper .navbar-sm {
+  display: none;
+}
+
 body nav .navbar-wrapper .logo {
   padding: 1vh 1vw;
   text-align: center;
@@ -83,7 +97,6 @@ body nav .navbar-wrapper .nav-links {
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase;
-  /*Styling Buttons*/
 }
 
 body nav .navbar-wrapper .nav-links li {
@@ -117,12 +130,25 @@ body nav .navbar-wrapper .nav-links li a:hover::before {
   width: 25px;
 }
 
-body nav .navbar-wrapper .nav-links .login-button {
+body nav .navbar-wrapper .nav-links .login-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 2vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body nav .navbar-wrapper .nav-links .login-wrapper .login-button {
   background-color: transparent;
   border: 1.5px solid var(--color2);
   border-radius: 2em;
   padding: 0.6rem 0.8rem;
-  margin-left: 2vw;
   font-size: 1rem;
   color: var(--color2);
   cursor: pointer;
@@ -130,7 +156,7 @@ body nav .navbar-wrapper .nav-links .login-button {
   transition: all ease-in-out 250ms;
 }
 
-body nav .navbar-wrapper .nav-links .login-button:hover {
+body nav .navbar-wrapper .nav-links .login-wrapper .login-button:hover {
   color: #131418;
   background-color: var(--color2);
   border: 1.5px solid var(--color2);
@@ -138,7 +164,7 @@ body nav .navbar-wrapper .nav-links .login-button:hover {
   transition: all ease-in-out 250ms;
 }
 
-body nav .navbar-wrapper .nav-links .join-button {
+body nav .navbar-wrapper .nav-links .login-wrapper .join-button {
   color: #131418;
   background-color: var(--color3);
   border: 1.5px solid var(--color3);
@@ -151,7 +177,7 @@ body nav .navbar-wrapper .nav-links .join-button {
   cursor: pointer;
 }
 
-body nav .navbar-wrapper .nav-links .join-button:hover {
+body nav .navbar-wrapper .nav-links .login-wrapper .join-button:hover {
   color: #f2f5f7;
   background-color: transparent;
   border: 1.5px solid #f2f5f7;
@@ -383,6 +409,9 @@ body footer .opening-hours p {
   body nav {
     position: fixed;
     z-index: 3;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   body nav .navbar-wrapper {
     width: 100vw;
@@ -397,6 +426,27 @@ body footer .opening-hours p {
   body nav .navbar-wrapper .logo img {
     height: 4.5rem;
     width: 4.5rem;
+  }
+  body nav .navbar-wrapper .navbar-sm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body nav .navbar-wrapper .navbar-sm a {
+    display: block;
+    position: absolute;
+    left: 5%;
+    top: 35.5%;
+  }
+  body nav .navbar-wrapper .navbar-sm a img {
+    height: 1.8rem;
+    width: 1.8rem;
   }
   body nav .navbar-wrapper .hamburger {
     display: block;
@@ -424,6 +474,13 @@ body footer .opening-hours p {
     -webkit-transition: all 1s ease-out;
     transition: all 1s ease-out;
     pointer-events: none;
+  }
+  body nav .navbar-wrapper .nav-links .login-wrapper {
+    margin-left: 0px;
+    margin-right: 40px;
+  }
+  body nav .navbar-wrapper .nav-links .login-wrapper .join-button {
+    margin-left: 20px;
   }
   body nav .navbar-wrapper .nav-links.open {
     -webkit-clip-path: circle(1000px at 90% -10%);

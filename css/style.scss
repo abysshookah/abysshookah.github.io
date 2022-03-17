@@ -25,10 +25,20 @@
   scroll-behavior: smooth;
   list-style-type: none;
   color: var(--color1);
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
 }
 
 body {
   background-color: var(--color2);
+  overflow-x: hidden;
   nav {
     position: absolute;
     justify-content: center;
@@ -43,6 +53,9 @@ body {
       display: flex;
       justify-content: space-between;
       width: var(--nav-content-width);
+      .navbar-sm {
+        display: none;
+      }
       .logo {
         padding: 1vh 1vw;
         text-align: center;
@@ -61,6 +74,7 @@ body {
         text-transform: uppercase;
         li {
           position: relative;
+
           a {
             padding: 20px 40px 20px 0px;
             text-decoration: none;
@@ -84,41 +98,45 @@ body {
             width: 25px;
           }
         }
-        /*Styling Buttons*/
-        .login-button {
-          background-color: transparent;
-          border: 1.5px solid var(--color2);
-          border-radius: 2em;
-          padding: 0.6rem 0.8rem;
-          margin-left: 2vw;
-          font-size: 1rem;
-          color: var(--color2);
-          cursor: pointer;
-          transition: all ease-in-out 250ms;
-        }
-        .login-button:hover {
-          color: #131418;
-          background-color: var(--color2);
-          border: 1.5px solid var(--color2);
-          transition: all ease-in-out 250ms;
-        }
-        .join-button {
-          color: #131418;
-          background-color: var(--color3);
-          border: 1.5px solid var(--color3);
-          border-radius: 2em;
-          padding: 0.6rem 0.8rem;
-          font-size: 1rem;
-          margin-left: 0.5vw;
-          transition: all ease-in-out 250ms;
 
-          cursor: pointer;
-        }
-        .join-button:hover {
-          color: #f2f5f7;
-          background-color: transparent;
-          border: 1.5px solid #f2f5f7;
-          transition: all ease-in-out 250ms;
+        .login-wrapper {
+          display: flex;
+          flex-direction: row;
+          margin-left: 2vw;
+          justify-content: space-between;
+          .login-button {
+            background-color: transparent;
+            border: 1.5px solid var(--color2);
+            border-radius: 2em;
+            padding: 0.6rem 0.8rem;
+            font-size: 1rem;
+            color: var(--color2);
+            cursor: pointer;
+            transition: all ease-in-out 250ms;
+          }
+          .login-button:hover {
+            color: #131418;
+            background-color: var(--color2);
+            border: 1.5px solid var(--color2);
+            transition: all ease-in-out 250ms;
+          }
+          .join-button {
+            color: #131418;
+            background-color: var(--color3);
+            border: 1.5px solid var(--color3);
+            border-radius: 2em;
+            padding: 0.6rem 0.8rem;
+            font-size: 1rem;
+            margin-left: 0.5vw;
+            transition: all ease-in-out 250ms;
+            cursor: pointer;
+          }
+          .join-button:hover {
+            color: #f2f5f7;
+            background-color: transparent;
+            border: 1.5px solid #f2f5f7;
+            transition: all ease-in-out 250ms;
+          }
         }
       }
     }
@@ -291,6 +309,7 @@ body {
     nav {
       position: fixed;
       z-index: 3;
+      justify-content: flex-start;
       .navbar-wrapper {
         width: 100vw;
         justify-content: center;
@@ -300,6 +319,21 @@ body {
           img {
             height: 4.5rem;
             width: 4.5rem;
+          }
+        }
+        .navbar-sm {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a {
+            display: block;
+            position: absolute;
+            left: 5%;
+            top: 35.5%;
+            img {
+              height: 1.8rem;
+              width: 1.8rem;
+            }
           }
         }
         .hamburger {
@@ -321,6 +355,13 @@ body {
           clip-path: circle(50px at 90% -20%);
           transition: all 1s ease-out;
           pointer-events: none;
+          .login-wrapper {
+            margin-left: 0px;
+            margin-right: 40px;
+            .join-button {
+              margin-left: 20px;
+            }
+          }
         }
         .nav-links.open {
           clip-path: circle(1000px at 90% -10%);
