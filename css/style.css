@@ -20,7 +20,7 @@
 
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   text-decoration: none;
   scroll-behavior: smooth;
   list-style-type: none;
@@ -32,15 +32,14 @@ body {
 }
 
 body nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: absolute;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
   height: 6rem;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   z-index: 10;
   background-color: #13141800;
@@ -48,6 +47,7 @@ body nav {
           box-shadow: 0 3px 20px rgba(0, 0, 0, 0);
   -webkit-transition: all 600ms;
   transition: all 600ms;
+  /*Styling Hamburger Icon*/
 }
 
 body nav .navbar-wrapper {
@@ -58,9 +58,7 @@ body nav .navbar-wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: var(--nav-content-width);
-  /*Styling logo*/
   /*Styling Links*/
-  /*Styling Hamburger Icon*/
 }
 
 body nav .navbar-wrapper .logo {
@@ -161,11 +159,11 @@ body nav .navbar-wrapper .nav-links .join-button:hover {
   transition: all ease-in-out 250ms;
 }
 
-body nav .navbar-wrapper .hamburger {
+body nav .hamburger {
   display: none;
 }
 
-body nav .navbar-wrapper .hamburger div {
+body nav .hamburger div {
   width: 30px;
   height: 3px;
   background: #f2f5f7;
@@ -353,43 +351,54 @@ body footer .opening-hours p {
 
 /*Stying for small screens*/
 @media screen and (max-width: 1000px) {
-  .wrapper .menu,
-  .wrapper .membership,
-  .wrapper .catering,
-  .wrapper .apply {
+  body .wrapper .menu,
+  body .wrapper .membership,
+  body .wrapper .catering,
+  body .wrapper .apply {
     width: 100vw;
-    height: 50vw;
+    height: 55vw;
   }
-  .wrapper .menu p,
-  .wrapper .membership p,
-  .wrapper .catering p,
-  .wrapper .apply p {
+  body .wrapper .menu p,
+  body .wrapper .membership p,
+  body .wrapper .catering p,
+  body .wrapper .apply p {
     font-size: 1.5rem;
   }
-  .wrapper .menu h1,
-  .wrapper .membership h1,
-  .wrapper .catering h1,
-  .wrapper .apply h1 {
+  body .wrapper .menu h1,
+  body .wrapper .membership h1,
+  body .wrapper .catering h1,
+  body .wrapper .apply h1 {
     font-size: 2rem;
     margin: 0px 0px 0px 0px;
   }
-  .wrapper .menu a,
-  .wrapper .membership a,
-  .wrapper .catering a,
-  .wrapper .apply a {
+  body .wrapper .menu a,
+  body .wrapper .membership a,
+  body .wrapper .catering a,
+  body .wrapper .apply a {
     font-size: 1rem;
     padding: 10px 25px 10px 25px;
     border-radius: 90px;
     margin-top: 10px;
   }
-  nav {
+  body nav {
     position: fixed;
     z-index: 3;
   }
-  nav .navbar-wrapper {
-    width: 100%;
+  body nav .navbar-wrapper {
+    width: 100vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  nav .navbar-wrapper .hamburger {
+  body nav .navbar-wrapper .logo {
+    display: block;
+    margin-top: 5px;
+  }
+  body nav .navbar-wrapper .logo img {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+  body nav .navbar-wrapper .hamburger {
     display: block;
     position: absolute;
     cursor: pointer;
@@ -401,7 +410,7 @@ body footer .opening-hours p {
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;
   }
-  nav .navbar-wrapper .nav-links {
+  body nav .navbar-wrapper .nav-links {
     position: fixed;
     background: #131418;
     height: 100vh;
@@ -416,45 +425,51 @@ body footer .opening-hours p {
     transition: all 1s ease-out;
     pointer-events: none;
   }
-  nav .navbar-wrapper .nav-links.open {
+  body nav .navbar-wrapper .nav-links.open {
     -webkit-clip-path: circle(1000px at 90% -10%);
             clip-path: circle(1000px at 90% -10%);
     pointer-events: all;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  nav .navbar-wrapper .nav-links li {
+  body nav .navbar-wrapper .nav-links li {
     opacity: 0;
   }
-  nav .navbar-wrapper .nav-links li:nth-child(1) {
+  body nav .navbar-wrapper .nav-links li:nth-child(1) {
     -webkit-transition: all 0.5s ease 0.2s;
     transition: all 0.5s ease 0.2s;
   }
-  nav .navbar-wrapper .nav-links li:nth-child(2) {
+  body nav .navbar-wrapper .nav-links li:nth-child(2) {
     -webkit-transition: all 0.5s ease 0.4s;
     transition: all 0.5s ease 0.4s;
   }
-  nav .navbar-wrapper .nav-links li:nth-child(3) {
+  body nav .navbar-wrapper .nav-links li:nth-child(3) {
     -webkit-transition: all 0.5s ease 0.6s;
     transition: all 0.5s ease 0.6s;
   }
-  nav .navbar-wrapper .nav-links li:nth-child(4) {
+  body nav .navbar-wrapper .nav-links li:nth-child(4) {
     -webkit-transition: all 0.5s ease 0.7s;
     transition: all 0.5s ease 0.7s;
   }
-  nav .navbar-wrapper .nav-links li:nth-child(5) {
+  body nav .navbar-wrapper .nav-links li:nth-child(5) {
     -webkit-transition: all 0.5s ease 0.8s;
     transition: all 0.5s ease 0.8s;
   }
-  nav .navbar-wrapper .nav-links li:nth-child(6) {
+  body nav .navbar-wrapper .nav-links li:nth-child(6) {
     -webkit-transition: all 0.5s ease 0.9s;
     transition: all 0.5s ease 0.9s;
     margin: 0;
   }
-  nav .navbar-wrapper .nav-links li:nth-child(7) {
+  body nav .navbar-wrapper .nav-links li:nth-child(7) {
     -webkit-transition: all 0.5s ease 1s;
     transition: all 0.5s ease 1s;
     margin: 0;
   }
-  nav .navbar-wrapper li.fade {
+  body nav .navbar-wrapper li.fade {
     opacity: 1;
   }
 }
