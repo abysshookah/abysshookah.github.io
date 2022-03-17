@@ -257,24 +257,57 @@ body {
 
   footer {
     width: 100vw;
-    height: 50vh;
+    height: 200px;
     background: #000;
     display: flex;
-    flex-direction: row-reverse;
-
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-
-    .opening-hours {
+    p,
+    a,
+    h1,
+    span,
+    div {
+      color: var(--color2);
+    }
+    .footer-wrapper {
+      width: 60vw;
+      height: 100%;
       display: flex;
+      justify-content: space-around;
       flex-direction: column;
-      h1 {
-        color: white;
-        text-align: center;
+      padding: 0px 20px 0px 20px;
+      .footer-sm {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        h1 {
+          font-size: 20px;
+          margin-right: 10px;
+        }
+        a {
+          img {
+            width: 1.2rem;
+            height: 1.2rem;
+          }
+        }
       }
-      p {
-        color: white;
-        text-align: center;
+      .footer-rap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .footer-policy {
+          display: flex;
+          flex-direction: row;
+          a,
+          p {
+            margin-right: 10px;
+          }
+        }
+      }
+      a:hover {
+        color: var(--color3);
       }
     }
   }
@@ -289,7 +322,7 @@ body {
       .catering,
       .apply {
         width: 100vw;
-        height: 55vw;
+        height: 60vw;
         p {
           font-size: 1.5rem;
         }
@@ -399,6 +432,9 @@ body {
           opacity: 1;
         }
       }
+    }
+    iframe {
+      height: 60vw;
     }
   }
 }

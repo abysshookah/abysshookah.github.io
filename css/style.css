@@ -339,23 +339,8 @@ body main iframe {
 
 body footer {
   width: 100vw;
-  height: 50vh;
+  height: 200px;
   background: #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body footer .opening-hours {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,16 +348,88 @@ body footer .opening-hours {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body footer .opening-hours h1 {
-  color: white;
-  text-align: center;
+body footer p,
+body footer a,
+body footer h1,
+body footer span,
+body footer div {
+  color: var(--color2);
 }
 
-body footer .opening-hours p {
-  color: white;
-  text-align: center;
+body footer .footer-wrapper {
+  width: 60vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px 20px 0px 20px;
+}
+
+body footer .footer-wrapper .footer-sm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body footer .footer-wrapper .footer-sm h1 {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+body footer .footer-wrapper .footer-sm a img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+body footer .footer-wrapper .footer-rap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body footer .footer-wrapper .footer-rap .footer-policy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body footer .footer-wrapper .footer-rap .footer-policy a,
+body footer .footer-wrapper .footer-rap .footer-policy p {
+  margin-right: 10px;
+}
+
+body footer .footer-wrapper a:hover {
+  color: var(--color3);
 }
 
 /*Stying for small screens*/
@@ -382,7 +439,7 @@ body footer .opening-hours p {
   body .wrapper .catering,
   body .wrapper .apply {
     width: 100vw;
-    height: 55vw;
+    height: 60vw;
   }
   body .wrapper .menu p,
   body .wrapper .membership p,
@@ -528,6 +585,9 @@ body footer .opening-hours p {
   }
   body nav .navbar-wrapper li.fade {
     opacity: 1;
+  }
+  body iframe {
+    height: 60vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
