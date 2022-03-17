@@ -283,14 +283,25 @@ body {
         align-items: flex-end;
 
         h1 {
-          font-size: 20px;
+          font-size: 25px;
           margin-right: 10px;
         }
         a {
+          margin-right: 10px;
+          transition: var(--transition-speed);
+
           img {
-            width: 1.2rem;
-            height: 1.2rem;
+            width: 1.4rem;
+            height: 1.4em;
           }
+          #youtube {
+            margin-left: 2px;
+            transform: scale(1.25);
+          }
+        }
+        a:hover {
+          transform: scale(1.2);
+          transition: var(--transition-speed);
         }
       }
       .footer-rap {
@@ -308,6 +319,21 @@ body {
       }
       a:hover {
         color: var(--color3);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  body {
+    nav {
+      .navbar-wrapper {
+        width: 80vw;
+      }
+    }
+    footer {
+      .footer-wrapper {
+        width: 80vw;
       }
     }
   }

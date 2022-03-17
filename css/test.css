@@ -75,7 +75,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* filter: brightness(100%) grayscale(1); */
 }
 
 .hero h1 {
@@ -124,10 +123,10 @@ body {
 }
 .text {
   color: #fcfffd;
-  border-right: 2px solid #7fc8f8;
+  border-right: 2px solid #003366;
   font-size: 55px;
   font-family: sans-serif;
-  color: #7fc8f8;
+  color: #003366;
   font-family: "Bebas Neue", cursive;
 }
 

@@ -392,13 +392,32 @@ body footer .footer-wrapper .footer-sm {
 }
 
 body footer .footer-wrapper .footer-sm h1 {
-  font-size: 20px;
+  font-size: 25px;
   margin-right: 10px;
 }
 
+body footer .footer-wrapper .footer-sm a {
+  margin-right: 10px;
+  -webkit-transition: var(--transition-speed);
+  transition: var(--transition-speed);
+}
+
 body footer .footer-wrapper .footer-sm a img {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.4rem;
+  height: 1.4em;
+}
+
+body footer .footer-wrapper .footer-sm a #youtube {
+  margin-left: 2px;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+body footer .footer-wrapper .footer-sm a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: var(--transition-speed);
+  transition: var(--transition-speed);
 }
 
 body footer .footer-wrapper .footer-rap {
@@ -430,6 +449,15 @@ body footer .footer-wrapper .footer-rap .footer-policy p {
 
 body footer .footer-wrapper a:hover {
   color: var(--color3);
+}
+
+@media screen and (max-width: 1650px) {
+  body nav .navbar-wrapper {
+    width: 80vw;
+  }
+  body footer .footer-wrapper {
+    width: 80vw;
+  }
 }
 
 /*Stying for small screens*/
