@@ -39,6 +39,7 @@ ul {
 body {
   background-color: var(--color2);
   overflow-x: hidden;
+  /* Animation */
 }
 
 body nav {
@@ -223,6 +224,188 @@ body .toggle .line2 {
 body .toggle .line3 {
   -webkit-transform: rotate(45deg) translate(-5px, -6px);
           transform: rotate(45deg) translate(-5px, -6px);
+}
+
+body .scroll-indicator {
+  display: block;
+  margin-bottom: 30px;
+  width: 20px;
+  height: 40px;
+  border: 2px solid #7fc8f8c7;
+  border-radius: 50px;
+  position: absolute;
+  -webkit-box-shadow: 0px 0px 35px -5px #7fc8f8c7;
+          box-shadow: 0px 0px 35px -5px #7fc8f8c7;
+  opacity: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body .display-none {
+  opacity: 0%;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+body .scroll-indicator::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #7fc8f8c7;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-animation: scrollAnim 1.8s 0.5s infinite ease-in;
+          animation: scrollAnim 1.8s 0.5s infinite ease-in;
+  -webkit-box-shadow: 0px 0px 35px -5px #7fc8f8c7;
+          box-shadow: 0px 0px 35px -5px #7fc8f8c7;
+}
+
+@-webkit-keyframes scrollAnim {
+  0% {
+    -webkit-transform: translate(-50%, 0) rotateX(0);
+            transform: translate(-50%, 0) rotateX(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  15% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, 30px) rotateX(30deg);
+            transform: translate(-50%, 30px) rotateX(30deg);
+  }
+}
+
+@keyframes scrollAnim {
+  0% {
+    -webkit-transform: translate(-50%, 0) rotateX(0);
+            transform: translate(-50%, 0) rotateX(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  15% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, 30px) rotateX(30deg);
+            transform: translate(-50%, 30px) rotateX(30deg);
+  }
+}
+
+body .head-sticky {
+  margin-top: 1rem;
+}
+
+body .hero {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url(/img/cloud.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body .hero h1 {
+  position: absolute;
+  margin-top: 500px;
+}
+
+body .hero img {
+  width: 100%;
+  -webkit-filter: brightness(10%);
+          filter: brightness(10%);
+}
+
+body .hero .hero-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .hero .hero-wrapper .abyss {
+  color: #fcfffd;
+  font-size: 100px;
+  font-family: "Bebas Neue", cursive;
+}
+
+body .hero .hero-wrapper .abyss-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: -40px;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .hero .hero-wrapper .abyss-wrapper .iam {
+  color: #fcfffd;
+  font-size: 55px;
+  padding: 15px;
+  font-family: "Bebas Neue", cursive;
+}
+
+body .hero .hero-wrapper .abyss-wrapper .text {
+  color: #fcfffd;
+  border-right: 2px solid #7fc8f8;
+  font-size: 55px;
+  font-family: sans-serif;
+  color: #7fc8f8;
+  font-family: "Bebas Neue", cursive;
 }
 
 body main {
@@ -451,6 +634,16 @@ body footer .footer-wrapper .footer-rap .footer-policy p {
   margin-right: 10px;
 }
 
+body footer .footer-wrapper .footer-rap .footer-copyright div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 body footer .footer-wrapper a:hover {
   color: var(--color3);
 }
@@ -492,38 +685,6 @@ body footer .footer-wrapper a:hover {
 }
 
 @media screen and (max-width: 1000px) {
-  body .wrapper section {
-    height: 40vw;
-  }
-  body .wrapper .menu,
-  body .wrapper .membership,
-  body .wrapper .catering,
-  body .wrapper .apply {
-    width: 100vw;
-    height: 70vw;
-  }
-  body .wrapper .menu p,
-  body .wrapper .membership p,
-  body .wrapper .catering p,
-  body .wrapper .apply p {
-    font-size: 1.5rem;
-  }
-  body .wrapper .menu h1,
-  body .wrapper .membership h1,
-  body .wrapper .catering h1,
-  body .wrapper .apply h1 {
-    font-size: 2rem;
-    margin: 0px 0px 0px 0px;
-  }
-  body .wrapper .menu a,
-  body .wrapper .membership a,
-  body .wrapper .catering a,
-  body .wrapper .apply a {
-    font-size: 1rem;
-    padding: 10px 25px 10px 25px;
-    border-radius: 90px;
-    margin-top: 10px;
-  }
   body nav {
     position: fixed;
     z-index: 3;
@@ -647,8 +808,46 @@ body footer .footer-wrapper a:hover {
   body nav .navbar-wrapper li.fade {
     opacity: 1;
   }
+  body .hero {
+    height: 90vw;
+  }
+  body .scroll-indicator {
+    margin-bottom: 55px;
+  }
   body iframe {
     height: 70vw;
+  }
+  body .wrapper section {
+    height: 40vw;
+  }
+  body .wrapper .menu,
+  body .wrapper .membership,
+  body .wrapper .catering,
+  body .wrapper .apply {
+    width: 100vw;
+    height: 60vw;
+  }
+  body .wrapper .menu p,
+  body .wrapper .membership p,
+  body .wrapper .catering p,
+  body .wrapper .apply p {
+    font-size: 7vw;
+  }
+  body .wrapper .menu h1,
+  body .wrapper .membership h1,
+  body .wrapper .catering h1,
+  body .wrapper .apply h1 {
+    font-size: 9vw;
+    margin: 0px 0px 0px 0px;
+  }
+  body .wrapper .menu a,
+  body .wrapper .membership a,
+  body .wrapper .catering a,
+  body .wrapper .apply a {
+    font-size: 4vw;
+    padding: 10px 25px 10px 25px;
+    border-radius: 90px;
+    margin-top: 10px;
   }
   body footer .footer-wrapper {
     -webkit-box-align: center;
@@ -719,6 +918,15 @@ body footer .footer-wrapper a:hover {
         -ms-flex-align: center;
             align-items: center;
   }
+  body footer .footer-wrapper .footer-sm {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   body footer .footer-wrapper .footer-rap {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -732,6 +940,9 @@ body footer .footer-wrapper a:hover {
   body footer .footer-wrapper .footer-rap .footer-policy {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   body footer .footer-wrapper .footer-rap .footer-policy a,
   body footer .footer-wrapper .footer-rap .footer-policy p {
@@ -741,8 +952,10 @@ body footer .footer-wrapper a:hover {
     margin-top: 20px;
   }
   body footer .footer-wrapper .footer-rap .footer-copyright a,
-  body footer .footer-wrapper .footer-rap .footer-copyright p {
-    font-size: 14px;
+  body footer .footer-wrapper .footer-rap .footer-copyright p,
+  body footer .footer-wrapper .footer-rap .footer-copyright span,
+  body footer .footer-wrapper .footer-rap .footer-copyright #text {
+    font-size: 11px;
   }
 }
 /*# sourceMappingURL=style.css.map */

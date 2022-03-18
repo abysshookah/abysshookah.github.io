@@ -173,6 +173,126 @@ body {
     }
   }
 
+  .scroll-indicator {
+    display: block;
+    margin-bottom: 30px;
+    width: 20px;
+    height: 40px;
+    border: 2px solid #7fc8f8c7;
+    border-radius: 50px;
+    position: absolute;
+    box-shadow: 0px 0px 35px -5px #7fc8f8c7;
+    opacity: 100%;
+    transition: all 0.5s;
+  }
+
+  .display-none {
+    opacity: 0%;
+    transition: opacity 0.5s;
+  }
+
+  .scroll-indicator::before {
+    content: "";
+    position: absolute;
+    top: 0.5em;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #7fc8f8c7;
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    animation: scrollAnim 1.8s 0.5s infinite ease-in;
+    box-shadow: 0px 0px 35px -5px #7fc8f8c7;
+  }
+
+  /* Animation */
+  @keyframes scrollAnim {
+    0% {
+      transform: translate(-50%, 0) rotateX(0);
+      opacity: 0;
+    }
+
+    5% {
+      opacity: 0.5;
+    }
+
+    15% {
+      opacity: 1;
+    }
+
+    90%,
+    100% {
+      opacity: 0;
+    }
+
+    100% {
+      transform: translate(-50%, 30px) rotateX(30deg);
+    }
+  }
+
+  .head-sticky {
+    margin-top: 1rem;
+  }
+
+  .hero {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url(/img/cloud.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    h1 {
+      position: absolute;
+      margin-top: 500px;
+    }
+
+    img {
+      width: 100%;
+      filter: brightness(10%);
+    }
+    .hero-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      user-select: none;
+      .abyss {
+        color: #fcfffd;
+        font-size: 100px;
+        font-family: "Bebas Neue", cursive;
+      }
+      .abyss-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-top: -40px;
+        width: 100%;
+        user-select: none;
+        .iam {
+          color: #fcfffd;
+          font-size: 55px;
+          padding: 15px;
+          font-family: "Bebas Neue", cursive;
+        }
+        .text {
+          color: #fcfffd;
+          border-right: 2px solid #7fc8f8;
+          font-size: 55px;
+          font-family: sans-serif;
+          color: #7fc8f8;
+          font-family: "Bebas Neue", cursive;
+        }
+      }
+    }
+  }
+
   main {
     width: 100vw;
 
@@ -318,6 +438,12 @@ body {
             margin-right: 10px;
           }
         }
+        .footer-copyright {
+          div {
+            display: flex;
+            flex-direction: row;
+          }
+        }
       }
       a:hover {
         color: var(--color3);
@@ -392,32 +518,6 @@ body {
 
 @media screen and (max-width: 1000px) {
   body {
-    .wrapper {
-      section {
-        height: 40vw;
-      }
-      .menu,
-      .membership,
-      .catering,
-      .apply {
-        width: 100vw;
-        height: 70vw;
-        p {
-          font-size: 1.5rem;
-        }
-        h1 {
-          font-size: 2rem;
-          margin: 0px 0px 0px 0px;
-        }
-        a {
-          font-size: 1rem;
-          padding: 10px 25px 10px 25px;
-          border-radius: 90px;
-          margin-top: 10px;
-        }
-      }
-    }
-
     nav {
       position: fixed;
       z-index: 3;
@@ -512,8 +612,39 @@ body {
         }
       }
     }
+    .hero {
+      height: 90vw;
+    }
+    .scroll-indicator {
+      margin-bottom: 55px;
+    }
     iframe {
       height: 70vw;
+    }
+    .wrapper {
+      section {
+        height: 40vw;
+      }
+      .menu,
+      .membership,
+      .catering,
+      .apply {
+        width: 100vw;
+        height: 60vw;
+        p {
+          font-size: 7vw;
+        }
+        h1 {
+          font-size: 9vw;
+          margin: 0px 0px 0px 0px;
+        }
+        a {
+          font-size: 4vw;
+          padding: 10px 25px 10px 25px;
+          border-radius: 90px;
+          margin-top: 10px;
+        }
+      }
     }
     footer {
       .footer-wrapper {
@@ -570,12 +701,17 @@ body {
     footer {
       .footer-wrapper {
         align-items: center;
+        .footer-sm {
+          flex-direction: column;
+          align-items: center;
+        }
         .footer-rap {
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
           .footer-policy {
             flex-wrap: wrap;
+            justify-content: center;
             a,
             p {
               font-size: 8px;
@@ -583,9 +719,12 @@ body {
           }
           .footer-copyright {
             margin-top: 20px;
+
             a,
-            p {
-              font-size: 14px;
+            p,
+            span,
+            #text {
+              font-size: 11px;
             }
           }
         }
