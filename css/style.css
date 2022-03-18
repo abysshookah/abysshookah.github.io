@@ -36,8 +36,15 @@ ul {
   list-style-type: none;
 }
 
+#index-body {
+  background: var(--color2);
+}
+
+#menu-body {
+  background: var(--color1);
+}
+
 body {
-  background-color: var(--color2);
   overflow-x: hidden;
   /* Animation */
 }
@@ -408,11 +415,11 @@ body .hero .hero-wrapper .abyss-wrapper .text {
   font-family: "Bebas Neue", cursive;
 }
 
-body main {
+body #index-main {
   width: 100vw;
 }
 
-body main .wrapper {
+body #index-main .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -421,40 +428,40 @@ body main .wrapper {
   background-color: #000;
 }
 
-body main .wrapper .menu {
+body #index-main .wrapper .menu {
   background-image: url(/img/menu.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-body main .wrapper .membership {
+body #index-main .wrapper .membership {
   background-image: url(/img/membership.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-body main .wrapper .catering {
+body #index-main .wrapper .catering {
   background-image: url(/img/catering.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-body main .wrapper .apply {
+body #index-main .wrapper .apply {
   background-image: url(/img/apply.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-body main .wrapper section {
+body #index-main .wrapper section {
   width: 50vw;
   height: 25vw;
 }
 
-body main .wrapper section article {
+body #index-main .wrapper section article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,25 +483,25 @@ body main .wrapper section article {
           user-select: none;
 }
 
-body main .wrapper section article h1,
-body main .wrapper section article p,
-body main .wrapper section article a {
+body #index-main .wrapper section article h1,
+body #index-main .wrapper section article p,
+body #index-main .wrapper section article a {
   color: var(--color2);
 }
 
-body main .wrapper section article p {
+body #index-main .wrapper section article p {
   font-size: 2rem;
   font-family: "League Gothic", sans-serif;
 }
 
-body main .wrapper section article h1 {
+body #index-main .wrapper section article h1 {
   text-transform: uppercase;
   font-size: 5rem;
   margin: -15px 0px -25px 0px;
   font-family: "Bebas Neue", cursive;
 }
 
-body main .wrapper section article a {
+body #index-main .wrapper section article a {
   padding: 10px 35px 10px 35px;
   border-radius: 90px;
   border: none;
@@ -507,7 +514,7 @@ body main .wrapper section article a {
   transition: all ease-in-out var(--transition-speed);
 }
 
-body main .wrapper section article a:hover {
+body #index-main .wrapper section article a:hover {
   -webkit-filter: brightness(170%);
           filter: brightness(170%);
   -webkit-transition: all ease-in-out var(--transition-speed);
@@ -515,10 +522,73 @@ body main .wrapper section article a:hover {
   background-size: contain;
 }
 
-body main iframe {
+body #index-main iframe {
   width: 100vw;
   -webkit-filter: grayscale(0.5);
           filter: grayscale(0.5);
+}
+
+body #menu-main .menu-container {
+  width: 100%;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #menu-main .menu-container .menu-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+body #menu-main .menu-container .menu-tabs .menu-tab {
+  font-size: 16px;
+  padding: 15px 60px;
+  cursor: pointer;
+  color: var(--color2);
+}
+
+body #menu-main .menu-container .menu-tabs .menu-tab.active {
+  color: var(--color1);
+  background-color: var(--color3);
+}
+
+body #menu-main .menu-container .menu-content {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 25px;
+}
+
+body #menu-main .menu-container .menu-content .menu-content-item {
+  display: none;
+  padding: 50px;
+  border: 1px solid #ccc;
+  color: var(--color2);
+}
+
+body #menu-main .menu-container .menu-content .menu-content-item.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body footer {
@@ -652,13 +722,13 @@ body footer .footer-wrapper a:hover {
   body nav .navbar-wrapper {
     width: 80vw;
   }
-  body main .wrapper section article p {
+  body #index-main .wrapper section article p {
     font-size: 1.8rem;
   }
-  body main .wrapper section article h1 {
+  body #index-main .wrapper section article h1 {
     font-size: 4.5rem;
   }
-  body main .wrapper section article a {
+  body #index-main .wrapper section article a {
     font-size: 1.4rem;
   }
   body footer .footer-wrapper {
@@ -670,13 +740,13 @@ body footer .footer-wrapper a:hover {
   body nav .navbar-wrapper {
     width: 90vw;
   }
-  body main .wrapper section article p {
+  body #index-main .wrapper section article p {
     font-size: 1.4rem;
   }
-  body main .wrapper section article h1 {
+  body #index-main .wrapper section article h1 {
     font-size: 3.6rem;
   }
-  body main .wrapper section article a {
+  body #index-main .wrapper section article a {
     font-size: 1.2rem;
   }
   body footer .footer-wrapper {
