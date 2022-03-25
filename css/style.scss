@@ -670,34 +670,37 @@ body {
     .scroll-indicator {
       margin-bottom: 55px;
     }
+    #index-main {
+      .wrapper {
+        section {
+          height: 40vw;
+        }
+        .menu,
+        .membership,
+        .catering,
+        .apply {
+          width: 100vw;
+          height: 60vw;
+          p {
+            font-size: 7vw;
+          }
+          h1 {
+            font-size: 9vw;
+            margin: 0px 0px 0px 0px;
+          }
+          a {
+            font-size: 4vw;
+            padding: 10px 25px 10px 25px;
+            border-radius: 90px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
     iframe {
       height: 70vw;
     }
-    .wrapper {
-      section {
-        height: 40vw;
-      }
-      .menu,
-      .membership,
-      .catering,
-      .apply {
-        width: 100vw;
-        height: 60vw;
-        p {
-          font-size: 7vw;
-        }
-        h1 {
-          font-size: 9vw;
-          margin: 0px 0px 0px 0px;
-        }
-        a {
-          font-size: 4vw;
-          padding: 10px 25px 10px 25px;
-          border-radius: 90px;
-          margin-top: 10px;
-        }
-      }
-    }
+
     footer {
       .footer-wrapper {
         align-items: center;
@@ -724,28 +727,30 @@ body {
 /*Stying for small screens*/
 @media screen and (max-width: 500px) {
   body {
-    .wrapper {
-      section {
-        height: 40vw;
-      }
-      .menu,
-      .membership,
-      .catering,
-      .apply {
-        width: 100vw;
-        height: 70vw;
-        p {
-          font-size: 1.5rem;
+    #index-main {
+      .wrapper {
+        section {
+          height: 40vw;
         }
-        h1 {
-          font-size: 2rem;
-          margin: 0px 0px 0px 0px;
-        }
-        a {
-          font-size: 1rem;
-          padding: 10px 25px 10px 25px;
-          border-radius: 90px;
-          margin-top: 10px;
+        .menu,
+        .membership,
+        .catering,
+        .apply {
+          width: 100vw;
+          height: 70vw;
+          p {
+            font-size: 1.5rem;
+          }
+          h1 {
+            font-size: 2rem;
+            margin: 0px 0px 0px 0px;
+          }
+          a {
+            font-size: 1rem;
+            padding: 10px 25px 10px 25px;
+            border-radius: 90px;
+            margin-top: 10px;
+          }
         }
       }
     }

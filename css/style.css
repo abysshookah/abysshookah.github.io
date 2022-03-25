@@ -884,40 +884,40 @@ body footer .footer-wrapper a:hover {
   body .scroll-indicator {
     margin-bottom: 55px;
   }
-  body iframe {
-    height: 70vw;
-  }
-  body .wrapper section {
+  body #index-main .wrapper section {
     height: 40vw;
   }
-  body .wrapper .menu,
-  body .wrapper .membership,
-  body .wrapper .catering,
-  body .wrapper .apply {
+  body #index-main .wrapper .menu,
+  body #index-main .wrapper .membership,
+  body #index-main .wrapper .catering,
+  body #index-main .wrapper .apply {
     width: 100vw;
     height: 60vw;
   }
-  body .wrapper .menu p,
-  body .wrapper .membership p,
-  body .wrapper .catering p,
-  body .wrapper .apply p {
+  body #index-main .wrapper .menu p,
+  body #index-main .wrapper .membership p,
+  body #index-main .wrapper .catering p,
+  body #index-main .wrapper .apply p {
     font-size: 7vw;
   }
-  body .wrapper .menu h1,
-  body .wrapper .membership h1,
-  body .wrapper .catering h1,
-  body .wrapper .apply h1 {
+  body #index-main .wrapper .menu h1,
+  body #index-main .wrapper .membership h1,
+  body #index-main .wrapper .catering h1,
+  body #index-main .wrapper .apply h1 {
     font-size: 9vw;
     margin: 0px 0px 0px 0px;
   }
-  body .wrapper .menu a,
-  body .wrapper .membership a,
-  body .wrapper .catering a,
-  body .wrapper .apply a {
+  body #index-main .wrapper .menu a,
+  body #index-main .wrapper .membership a,
+  body #index-main .wrapper .catering a,
+  body #index-main .wrapper .apply a {
     font-size: 4vw;
     padding: 10px 25px 10px 25px;
     border-radius: 90px;
     margin-top: 10px;
+  }
+  body iframe {
+    height: 70vw;
   }
   body footer .footer-wrapper {
     -webkit-box-align: center;
@@ -951,33 +951,33 @@ body footer .footer-wrapper a:hover {
 
 /*Stying for small screens*/
 @media screen and (max-width: 500px) {
-  body .wrapper section {
+  body #index-main .wrapper section {
     height: 40vw;
   }
-  body .wrapper .menu,
-  body .wrapper .membership,
-  body .wrapper .catering,
-  body .wrapper .apply {
+  body #index-main .wrapper .menu,
+  body #index-main .wrapper .membership,
+  body #index-main .wrapper .catering,
+  body #index-main .wrapper .apply {
     width: 100vw;
     height: 70vw;
   }
-  body .wrapper .menu p,
-  body .wrapper .membership p,
-  body .wrapper .catering p,
-  body .wrapper .apply p {
+  body #index-main .wrapper .menu p,
+  body #index-main .wrapper .membership p,
+  body #index-main .wrapper .catering p,
+  body #index-main .wrapper .apply p {
     font-size: 1.5rem;
   }
-  body .wrapper .menu h1,
-  body .wrapper .membership h1,
-  body .wrapper .catering h1,
-  body .wrapper .apply h1 {
+  body #index-main .wrapper .menu h1,
+  body #index-main .wrapper .membership h1,
+  body #index-main .wrapper .catering h1,
+  body #index-main .wrapper .apply h1 {
     font-size: 2rem;
     margin: 0px 0px 0px 0px;
   }
-  body .wrapper .menu a,
-  body .wrapper .membership a,
-  body .wrapper .catering a,
-  body .wrapper .apply a {
+  body #index-main .wrapper .menu a,
+  body #index-main .wrapper .membership a,
+  body #index-main .wrapper .catering a,
+  body #index-main .wrapper .apply a {
     font-size: 1rem;
     padding: 10px 25px 10px 25px;
     border-radius: 90px;
