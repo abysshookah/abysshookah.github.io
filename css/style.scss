@@ -434,9 +434,12 @@ body {
   }
 
   #apply-main {
+    padding-top: 150px;
+
     .apply-wrapper {
+
       width: 100%;
-      height: 90vh;
+
       display: flex;
       justify-content: center;
       align-items: center;
@@ -446,9 +449,66 @@ body {
       }
       .apply-form {
         width: var(--main-content-width);
+        p {
+          margin:0px 0px 10px 10px;
+
+        }
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          .form-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            .first-name {
+              width: 40%;
+            }
+            .last-name {
+              width: 40%;
+            }
+            .date-of-birth {
+              width: 15%;
+            }
+            .email {
+              width: 48.5%;
+            }
+            .email-confirm {
+              width: 48.5%;
+            }
+          }
+        }
+        .col {
+          display: flex;
+          flex-direction: column;
+          margin: 10px 0px 10px 0px;
+
+        }
       }
     }
   }
+
+  label {
+    margin:0px 0px 10px 10px;
+
+  }
+
+  input,select {
+    padding: 8px;
+    font-size: 15px;
+    border-width: 0px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 50px;
+  }
+
+  input,select:focus {
+    outline:none;
+
+  }
+
 
   footer {
     width: 100vw;

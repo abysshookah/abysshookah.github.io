@@ -595,9 +595,12 @@ body #menu-main .menu-container .menu-content .menu-content-item.active {
           justify-content: center;
 }
 
+body #apply-main {
+  padding-top: 150px;
+}
+
 body #apply-main .apply-wrapper {
   width: 100%;
-  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -619,6 +622,84 @@ body #apply-main .apply-wrapper h1, body #apply-main .apply-wrapper label, body 
 
 body #apply-main .apply-wrapper .apply-form {
   width: var(--main-content-width);
+}
+
+body #apply-main .apply-wrapper .apply-form p {
+  margin: 0px 0px 10px 10px;
+}
+
+body #apply-main .apply-wrapper .apply-form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+body #apply-main .apply-wrapper .apply-form .form-group .form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+body #apply-main .apply-wrapper .apply-form .form-group .form-row .first-name {
+  width: 40%;
+}
+
+body #apply-main .apply-wrapper .apply-form .form-group .form-row .last-name {
+  width: 40%;
+}
+
+body #apply-main .apply-wrapper .apply-form .form-group .form-row .date-of-birth {
+  width: 15%;
+}
+
+body #apply-main .apply-wrapper .apply-form .form-group .form-row .email {
+  width: 48.5%;
+}
+
+body #apply-main .apply-wrapper .apply-form .form-group .form-row .email-confirm {
+  width: 48.5%;
+}
+
+body #apply-main .apply-wrapper .apply-form .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px 0px 10px 0px;
+}
+
+body label {
+  margin: 0px 0px 10px 10px;
+}
+
+body input, body select {
+  padding: 8px;
+  font-size: 15px;
+  border-width: 0px;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 50px;
+}
+
+body input, body select:focus {
+  outline: none;
 }
 
 body footer {
