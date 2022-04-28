@@ -433,6 +433,8 @@ body {
   }
 
   #apply-main {
+  min-height: 80vh;
+
     padding-top: 150px;
     .apply-wrapper {
       width: 100%;
@@ -513,17 +515,21 @@ body {
 
   }
 
-  input,select {
+  textarea {
+    resize: none;
+  }
+
+  input,textarea,select {
     padding: 8px;
     font-size: 15px;
     border-width: 0px;
     background-color: #FFFFFF;
     color: #000000;
     border-style: solid;
-    border-radius: 50px;
+    border-radius: 15px;
   }
 
-  input,select:focus {
+  input,textarea,select:focus {
     outline:none;
 
   }

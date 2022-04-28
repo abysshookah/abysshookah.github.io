@@ -596,6 +596,7 @@ body #menu-main .menu-container .menu-content .menu-content-item.active {
 }
 
 body #apply-main {
+  min-height: 80vh;
   padding-top: 150px;
 }
 
@@ -716,17 +717,21 @@ body label {
   margin: 0px 0px 10px 10px;
 }
 
-body input, body select {
+body textarea {
+  resize: none;
+}
+
+body input, body textarea, body select {
   padding: 8px;
   font-size: 15px;
   border-width: 0px;
   background-color: #FFFFFF;
   color: #000000;
   border-style: solid;
-  border-radius: 50px;
+  border-radius: 15px;
 }
 
-body input, body select:focus {
+body input, body textarea, body select:focus {
   outline: none;
 }
 
