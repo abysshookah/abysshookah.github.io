@@ -36,7 +36,7 @@ ul {
   list-style-type: none;
 }
 
-#apply-main {
+.form-main {
   background-color: var(--color1);
 }
 
@@ -595,12 +595,12 @@ body #menu-main .menu-container .menu-content .menu-content-item.active {
           justify-content: center;
 }
 
-body #apply-main {
+body .form-main {
   min-height: 80vh;
   padding-top: 150px;
 }
 
-body #apply-main .apply-wrapper {
+body .form-main .apply-wrapper {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -617,28 +617,28 @@ body #apply-main .apply-wrapper {
           flex-direction: column;
 }
 
-body #apply-main .apply-wrapper h1, body #apply-main .apply-wrapper label, body #apply-main .apply-wrapper p {
+body .form-main .apply-wrapper h1, body .form-main .apply-wrapper label, body .form-main .apply-wrapper p {
   color: white;
 }
 
-body #apply-main .apply-wrapper .apply-form {
+body .form-main .apply-wrapper .apply-form {
   width: var(--main-content-width);
   margin-bottom: 50px;
 }
 
-body #apply-main .apply-wrapper .apply-form p {
+body .form-main .apply-wrapper .apply-form p {
   margin: 0px 0px 10px 10px;
 }
 
-body #apply-main .apply-wrapper .apply-form h1 {
+body .form-main .apply-wrapper .apply-form h1 {
   margin: 20px 0px 20px 0px;
 }
 
-body #apply-main .apply-wrapper .apply-form .checkbox {
+body .form-main .apply-wrapper .apply-form .checkbox {
   margin: 20px 0px 20px 10px;
 }
 
-body #apply-main .apply-wrapper .apply-form button {
+body .form-main .apply-wrapper .apply-form button {
   color: #131418;
   background-color: var(--color3);
   border: 1.5px solid var(--color3);
@@ -652,7 +652,7 @@ body #apply-main .apply-wrapper .apply-form button {
   margin: 0px;
 }
 
-body #apply-main .apply-wrapper .apply-form button:hover {
+body .form-main .apply-wrapper .apply-form button:hover {
   color: #f2f5f7;
   background-color: transparent;
   border: 1.5px solid #f2f5f7;
@@ -660,7 +660,7 @@ body #apply-main .apply-wrapper .apply-form button:hover {
   transition: all ease-in-out 250ms;
 }
 
-body #apply-main .apply-wrapper .apply-form .form-group {
+body .form-main .apply-wrapper .apply-form .form-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -672,7 +672,7 @@ body #apply-main .apply-wrapper .apply-form .form-group {
   margin-bottom: 20px;
 }
 
-body #apply-main .apply-wrapper .apply-form .form-group .form-row {
+body .form-main .apply-wrapper .apply-form .form-group .form-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -686,23 +686,23 @@ body #apply-main .apply-wrapper .apply-form .form-group .form-row {
   width: 100%;
 }
 
-body #apply-main .apply-wrapper .apply-form .form-group .form-row .one-big {
+body .form-main .apply-wrapper .apply-form .form-group .form-row .one-big {
   width: 100%;
 }
 
-body #apply-main .apply-wrapper .apply-form .form-group .form-row .two-mid {
+body .form-main .apply-wrapper .apply-form .form-group .form-row .two-mid {
   width: 48.5%;
 }
 
-body #apply-main .apply-wrapper .apply-form .form-group .form-row .thr-mid {
+body .form-main .apply-wrapper .apply-form .form-group .form-row .thr-mid {
   width: 40%;
 }
 
-body #apply-main .apply-wrapper .apply-form .form-group .form-row .thr-small {
+body .form-main .apply-wrapper .apply-form .form-group .form-row .thr-small {
   width: 15%;
 }
 
-body #apply-main .apply-wrapper .apply-form .col {
+body .form-main .apply-wrapper .apply-form .col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -896,7 +896,7 @@ body footer .footer-wrapper a:hover {
   body footer .footer-wrapper {
     width: 90vw;
   }
-  body #apply-main .apply-wrapper .apply-form {
+  body .form-main .apply-wrapper .apply-form {
     width: 75%;
   }
 }
@@ -1063,31 +1063,34 @@ body footer .footer-wrapper a:hover {
     border-radius: 90px;
     margin-top: 10px;
   }
-  body #apply-main {
+  body .form-main {
     padding-top: 100px;
   }
-  body #apply-main .apply-wrapper .apply-form {
+  body .form-main .apply-wrapper .apply-form {
     width: 70%;
   }
-  body #apply-main .apply-wrapper .apply-form .form-group .form-row {
+  body .form-main .apply-wrapper .apply-form .form-group input {
+    width: 100%;
+  }
+  body .form-main .apply-wrapper .apply-form .form-group .form-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body #apply-main .apply-wrapper .apply-form .form-group .form-row .one-big {
+  body .form-main .apply-wrapper .apply-form .form-group .form-row .one-big {
     width: 100%;
   }
-  body #apply-main .apply-wrapper .apply-form .form-group .form-row .two-mid {
+  body .form-main .apply-wrapper .apply-form .form-group .form-row .two-mid {
     width: 100%;
   }
-  body #apply-main .apply-wrapper .apply-form .form-group .form-row .thr-mid {
+  body .form-main .apply-wrapper .apply-form .form-group .form-row .thr-mid {
     width: 100%;
   }
-  body #apply-main .apply-wrapper .apply-form .form-group .form-row .thr-small {
+  body .form-main .apply-wrapper .apply-form .form-group .form-row .thr-small {
     width: 100%;
   }
-  body #apply-main .apply-wrapper .apply-form .form-group .form-row .thr-small input {
+  body .form-main .apply-wrapper .apply-form .form-group .form-row .thr-small input {
     width: 100%;
   }
   body iframe {
@@ -1157,7 +1160,7 @@ body footer .footer-wrapper a:hover {
     border-radius: 90px;
     margin-top: 10px;
   }
-  body #apply-main .apply-wrapper .apply-form {
+  body .form-main .apply-wrapper .apply-form {
     width: 90%;
   }
   body footer .footer-wrapper {

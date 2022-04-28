@@ -36,7 +36,7 @@ ul {
   list-style-type: none;
 }
 
-#apply-main {
+.form-main {
   background-color: var(--color1);
 }
 
@@ -432,7 +432,7 @@ body {
     }
   }
 
-  #apply-main {
+  .form-main {
   min-height: 80vh;
 
     padding-top: 150px;
@@ -672,7 +672,7 @@ body {
         width: 90vw;
       }
     }
-    #apply-main {
+    .form-main {
       .apply-wrapper {
           .apply-form {
             width: 75%;
@@ -813,13 +813,16 @@ body {
       }
     }
 
-    #apply-main {
+    .form-main {
     padding-top: 100px;
 
       .apply-wrapper {
         .apply-form {
           width: 70%;
           .form-group {
+            input {
+              width: 100%;
+            }
             .form-row {
               flex-direction: column;
               .one-big {
@@ -901,7 +904,7 @@ body {
       }
     }
 
-    #apply-main {
+    .form-main {
       .apply-wrapper {
           .apply-form {
             width: 90%;
