@@ -808,6 +808,8 @@ body {
     }
 
     #apply-main {
+    padding-top: 100px;
+
       .apply-wrapper {
         .apply-form {
           width: 70%;
@@ -825,6 +827,9 @@ body {
               }
               .thr-small {
                 width: 100%;
+                input {
+                  width: 100%;
+                }
               }
             }
           }
