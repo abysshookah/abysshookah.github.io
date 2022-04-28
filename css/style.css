@@ -632,6 +632,7 @@ body .form-main .apply-wrapper .apply-form p {
 
 body .form-main .apply-wrapper .apply-form h1 {
   margin: 20px 0px 20px 0px;
+  text-transform: uppercase;
 }
 
 body .form-main .apply-wrapper .apply-form .checkbox {
