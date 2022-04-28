@@ -38,7 +38,6 @@ ul {
 
 #apply-main {
   background-color: var(--color1);
-
 }
 
 #index-body {
@@ -435,11 +434,8 @@ body {
 
   #apply-main {
     padding-top: 150px;
-
     .apply-wrapper {
-
       width: 100%;
-
       display: flex;
       justify-content: center;
       align-items: center;
@@ -449,33 +445,57 @@ body {
       }
       .apply-form {
         width: var(--main-content-width);
+        margin-bottom: 50px;
         p {
           margin:0px 0px 10px 10px;
+        }
+        h1 {
+          margin: 20px 0px 20px 0px;
+        }
+        .checkbox {
+          margin: 20px 0px 20px 10px;
+        }
+        button {
+          color: #131418;
+          background-color: var(--color3);
+          border: 1.5px solid var(--color3);
+          border-radius: 2em;
+          padding: 0.6rem 0.8rem;
+          font-size: 1rem;
+          margin-left: 0.5vw;
+          transition: all ease-in-out 250ms;
+          cursor: pointer;
+          margin: 0px;
 
+        }
+        button:hover {
+          color: #f2f5f7;
+          background-color: transparent;
+          border: 1.5px solid #f2f5f7;
+          transition: all ease-in-out 250ms;
         }
         .form-group {
           display: flex;
           flex-direction: column;
           width: 100%;
+          margin-bottom: 20px;
           .form-row {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
-            .first-name {
+            
+            .one-big {
+              width: 100%;
+            }
+            .two-mid {
+              width: 48.5%;
+            }
+            .thr-mid {
               width: 40%;
             }
-            .last-name {
-              width: 40%;
-            }
-            .date-of-birth {
+            .thr-small {
               width: 15%;
-            }
-            .email {
-              width: 48.5%;
-            }
-            .email-confirm {
-              width: 48.5%;
             }
           }
         }
@@ -483,7 +503,6 @@ body {
           display: flex;
           flex-direction: column;
           margin: 10px 0px 10px 0px;
-
         }
       }
     }
@@ -647,8 +666,16 @@ body {
         width: 90vw;
       }
     }
+    #apply-main {
+      .apply-wrapper {
+          .apply-form {
+            width: 75%;
+          }
+        }
+      }
+    }
   }
-}
+
 
 @media screen and (max-width: 1000px) {
   body {
@@ -779,6 +806,32 @@ body {
         }
       }
     }
+
+    #apply-main {
+      .apply-wrapper {
+        .apply-form {
+          width: 70%;
+          .form-group {
+            .form-row {
+              flex-direction: column;
+              .one-big {
+                width: 100%;
+              }
+              .two-mid {
+                width: 100%;
+              }
+              .thr-mid {
+                width: 100%;
+              }
+              .thr-small {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
     iframe {
       height: 70vw;
     }
@@ -836,6 +889,14 @@ body {
         }
       }
     }
+
+    #apply-main {
+      .apply-wrapper {
+          .apply-form {
+            width: 90%;
+          }
+        }
+      }
 
     footer {
       .footer-wrapper {
