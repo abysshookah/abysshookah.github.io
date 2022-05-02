@@ -13,9 +13,10 @@
   --bg-primary: #000000;
   --bg-secondary: #141418;
   --transition-speed: 250ms;
-  --nav-content-width: 60%;
+  --nav-content-width: 70%;
   --main-content-width: 50%;
   --hero-content-width: 65%;
+  --footer-content-width: 70%;
   --margin-top: 60px;
 }
 
@@ -37,6 +38,10 @@ ul {
 }
 
 .form-main {
+  background-color: var(--color1);
+}
+
+#apply-main {
   background-color: var(--color1);
 }
 
@@ -431,10 +436,87 @@ body {
       }
     }
   }
-
+  
+  #apply-main {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    min-height: 82vh;
+    .apply-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .work-with-abyss {
+        display: flex;
+        flex-direction: column;
+        width: var(--main-content-width);
+        hr {
+          display: none;
+        }
+        p,h1,li {
+          color: white;
+          margin-bottom: 15px;
+        }
+        ul {
+          margin-bottom: 15px;
+        }
+        p,li {
+          margin-top: 10px;
+        }
+        h1 {
+          margin-top: 25px;
+          width: max-content;
+          border-bottom: white solid 2px;
+        }
+        button {
+          width: 130px;
+          color: #131418;
+          background-color: var(--color3);
+          border: 1.5px solid var(--color3);
+          border-radius: 2em;
+          padding: 0.6rem 0.8rem;
+          font-size: 1rem;
+          margin-left: 0.5vw;
+          transition: all ease-in-out 250ms;
+          cursor: pointer;
+          margin: 0px;
+        }
+        button:hover {
+          color: #f2f5f7;
+          background-color: transparent;
+          border: 1.5px solid #f2f5f7;
+          transition: all ease-in-out 250ms;
+        }
+        .benefits-wrapper {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .benefits-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            text-align: center;
+            h3 {
+              color: white;
+              width: 60%;
+              user-select: none;
+            }
+            img {
+              width: 60%;
+              pointer-events: none;
+              user-select: none;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
   .form-main {
-  min-height: 80vh;
-
+    min-height: 80vh;
     padding-top: 150px;
     .apply-wrapper {
       width: 100%;
@@ -552,7 +634,7 @@ body {
       color: var(--color2);
     }
     .footer-wrapper {
-      width: 60vw;
+      width: var(--footer-content-width);
       height: 100%;
       display: flex;
       justify-content: space-around;
@@ -612,6 +694,46 @@ body {
   }
 }
 
+@media screen and (min-width: 2000px) {
+  body {
+    nav {
+      .navbar-wrapper {
+        width: 60vw;
+      }
+    }
+    main {
+      display: flex;
+      justify-content: center ;
+      .wrapper {
+        width: 90vw;
+      }
+    }
+    #index-main {
+      .wrapper {
+        section {
+          article {
+            p {
+              font-size: 1.8rem;
+            }
+            h1 {
+              font-size: 4.5rem;
+            }
+            a {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+    footer {
+      .footer-wrapper {
+        width: 60vw;
+      }
+    }
+  }
+}
+
+
 @media screen and (max-width: 1650px) {
   body {
     nav {
@@ -664,6 +786,15 @@ body {
             a {
               font-size: 1.2rem;
             }
+          }
+        }
+      }
+    }
+    #apply-main {
+      .apply-wrapper {
+        .work-with-abyss {
+          .benefits-wrapper {
+            display: none;
           }
         }
       }
@@ -813,6 +944,17 @@ body {
         }
       }
     }
+    #apply-main {
+      .apply-wrapper {
+        .work-with-abyss {
+
+
+           h1 {
+            font-size: 4vw;
+           }
+        }
+      }
+    }
 
     .form-main {
     padding-top: 100px;
@@ -901,6 +1043,18 @@ body {
             border-radius: 90px;
             margin-top: 10px;
           }
+        }
+      }
+    }
+
+    #apply-main {
+      .apply-wrapper {
+        .work-with-abyss {
+           h1 {
+            width: fit-content;
+
+             font-size: 5vw;
+           }
         }
       }
     }
