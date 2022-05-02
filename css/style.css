@@ -940,6 +940,13 @@ body footer .footer-wrapper .footer-sm a img {
   height: 1.4em;
 }
 
+body footer .footer-wrapper .footer-sm a #telegram {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+}
+
 body footer .footer-wrapper .footer-sm a #youtube {
   margin-left: 2px;
   -webkit-transform: scale(1.25);
