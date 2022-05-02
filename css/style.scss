@@ -794,7 +794,10 @@ body {
       .apply-wrapper {
         .work-with-abyss {
           .benefits-wrapper {
-            display: none;
+            flex-wrap: wrap;
+            .benefits-col {
+              width: 50%;
+            }
           }
         }
       }
@@ -947,8 +950,12 @@ body {
     #apply-main {
       .apply-wrapper {
         .work-with-abyss {
-
-
+          .benefits-title {
+            display: none;
+          }
+          .benefits-wrapper {
+            display: none;
+          }
            h1 {
             font-size: 4vw;
            }

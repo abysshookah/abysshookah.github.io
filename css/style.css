@@ -1055,7 +1055,11 @@ body footer .footer-wrapper a:hover {
     font-size: 1.2rem;
   }
   body #apply-main .apply-wrapper .work-with-abyss .benefits-wrapper {
-    display: none;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body #apply-main .apply-wrapper .work-with-abyss .benefits-wrapper .benefits-col {
+    width: 50%;
   }
   body footer .footer-wrapper {
     width: 90vw;
@@ -1226,6 +1230,12 @@ body footer .footer-wrapper a:hover {
     padding: 10px 25px 10px 25px;
     border-radius: 90px;
     margin-top: 10px;
+  }
+  body #apply-main .apply-wrapper .work-with-abyss .benefits-title {
+    display: none;
+  }
+  body #apply-main .apply-wrapper .work-with-abyss .benefits-wrapper {
+    display: none;
   }
   body #apply-main .apply-wrapper .work-with-abyss h1 {
     font-size: 4vw;
