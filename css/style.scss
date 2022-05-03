@@ -37,7 +37,7 @@ ul {
   list-style-type: none;
 }
 
-.form-main,#apply-main,#privacy-main {
+.form-main,#apply-main,.privacy-main {
   background-color: var(--color1);
   min-height: 85vh;
 }
@@ -380,10 +380,7 @@ body {
         }
       }
     }
-    iframe {
-      width: 100vw;
-      filter: grayscale(0.5);
-    }
+
   }
 
   #menu-main {
@@ -509,7 +506,7 @@ body {
     }
   }
 
-  #privacy-main {
+  .privacy-main {
     padding-top: 150px;
     padding-bottom: 50px;
     display: flex;
@@ -531,6 +528,9 @@ body {
         padding-left: 10px;
         margin-bottom: 20px;
         color: white;
+        br {
+          margin-bottom: 10px;
+        }
       }
       ol {
         li {
@@ -552,6 +552,7 @@ body {
             overflow-wrap: break-word;
             word-wrap: break-word;
           }
+
         }
       }
     }
@@ -658,7 +659,40 @@ body {
     outline:none;
 
   }
-
+  .footer-wrapper-nav-bg {
+    height: 300px;
+    background-color: var(--color1);
+    display: flex;
+    justify-content: center;
+    .footer-wrapper-nav {
+      width: var(--footer-content-width);
+      display: flex;
+      justify-content: space-around;
+      .footer-nav-col {
+        display: flex;
+        flex-direction: column;
+        a {
+          color: white;
+          transition: var(--transition-speed);
+        }
+        a:hover {
+          color: var(--color3);
+          transition: var(--transition-speed);
+        }
+        .footer-nav-title {
+          margin-top: 70px;
+          margin-bottom: 20px;
+           a {
+             font-size: 22px;
+             text-transform: uppercase;
+           }
+        }
+        .footer-nav {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 
   footer {
     width: 100vw;
@@ -691,12 +725,15 @@ body {
           margin-right: 15px;
           padding-top: 5px;
           font-family: "Bebas Neue", cursive;
+          user-select: none;
         }
         a {
           margin-right: 10px;
           transition: var(--transition-speed);
           padding-bottom: 4px;
+          user-select: none;
           img {
+            pointer-events: none;
             width: 1.4rem;
             height: 1.4em;
           }
@@ -752,7 +789,7 @@ body {
       display: flex;
       justify-content: center ;
       .wrapper {
-        width: 90vw;
+        width: 100vw;
       }
     }
     #index-main {
@@ -850,7 +887,7 @@ body {
         }
       }
     }
-    #privacy-main {
+    .privacy-main {
       .privacy-wrapper {
         width: 75%;
       }
@@ -1016,7 +1053,7 @@ body {
         }
       }
     }
-    #privacy-main {
+    .privacy-main {
       .privacy-wrapper {
         width: 75%;
       }
@@ -1126,7 +1163,7 @@ body {
       }
     }
 
-    #privacy-main {
+    .privacy-main {
       .privacy-wrapper {
         width: 90%;
       }
