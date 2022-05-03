@@ -716,7 +716,7 @@ body #apply-main .apply-wrapper .work-with-abyss .benefits-wrapper .benefits-col
 
 body .privacy-main {
   padding-top: 150px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1257,8 +1257,8 @@ body footer .footer-wrapper a:hover {
   }
   body nav .navbar-wrapper .nav-links {
     position: fixed;
-    background: #131418;
-    height: 100vh;
+    background: #000000;
+    height: 95vh;
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1269,6 +1269,9 @@ body footer .footer-wrapper a:hover {
     -webkit-transition: all 1s ease-out;
     transition: all 1s ease-out;
     pointer-events: none;
+  }
+  body nav .navbar-wrapper .nav-links li a {
+    padding: 20px 40px 20px 20px;
   }
   body nav .navbar-wrapper .nav-links .login-wrapper {
     margin-left: 0px;
