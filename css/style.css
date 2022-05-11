@@ -436,14 +436,14 @@ body #index-main .wrapper {
 }
 
 body #index-main .wrapper .locations {
-  background-image: url(/img/index/menu.png);
+  background-image: url(/img/index/partner.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 body #index-main .wrapper .partner {
-  background-image: url(/img/index/partner.png);
+  background-image: url(/img/index/locations.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
